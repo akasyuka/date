@@ -1,10 +1,10 @@
 CI
-docker build -t trading:1.0 .
-docker tag trading:1.0 akasyuka/trading:1.0
-docker push akasyuka/trading:1.0
+docker build -t spring-template:1.0 .
+docker tag spring-template:1.0 akasyuka/spring-template:1.0
+docker push akasyuka/spring-template:1.0
 
 CD
-docker run -- name appName -d -p 80:8080 akasyuka/trading:1.0
+docker run -- name appName -d -p 80:8080 akasyuka/spring-template:1.0
 
 java -jar trading-bot-1.0-SNAPSHOT.jar
 
