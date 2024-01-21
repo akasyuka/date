@@ -1,4 +1,4 @@
 package com.example.springtemplate;
 
-public class Controller {
+public class MainConfiguration {
 }

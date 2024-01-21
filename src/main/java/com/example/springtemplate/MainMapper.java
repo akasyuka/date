@@ -1,4 +1,4 @@
 package com.example.springtemplate;
 
-public class Enum {
+public class MainMapper {
 }
