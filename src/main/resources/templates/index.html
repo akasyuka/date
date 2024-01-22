@@ -12,7 +12,23 @@
             <button id="yes" class="variant-invisible" onclick="clickYes()">да</button>
             <button id="no" class="variant-invisible" onclick="clickNo()">нет</button>
         </div>
-<!--        <div id="ansYes" style="display: none;">Ваш ответ ДА</div>-->
-<!--        <div id="ansNo" style="display: none;">Ваш ответ НЕТ</div>-->
+        <form id="myForm">
+            <label for="field1">Имя:</label>
+            <input type="text" id="field1" name="field1"><br>
+
+            <label for="field2">Инст:</label>
+            <input type="text" id="field2" name="field2"><br>
+
+            <label for="field3">Тг:</label>
+            <input type="text" id="field3" name="field3"><br>
+
+            <label for="field4">Возраст:</label>
+            <input type="text" id="field4" name="field4"><br>
+
+            <label for="field5">О себе:</label>
+            <input type="text" id="field5" name="field5"><br>
+
+            <button type="button" onclick="submitForm()">Отправить</button>
+        </form>
 </body>
 </html>

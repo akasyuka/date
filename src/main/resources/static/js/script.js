@@ -81,6 +81,45 @@ async function clickNo() {
                         sendGetRequest()
 }
 
+function submitForm() {
+    // Получение значений полей формы
+    const field1Value = document.getElementById('field1').value;
+    const field2Value = document.getElementById('field2').value;
+    const field3Value = document.getElementById('field3').value;
+    const field4Value = document.getElementById('field4').value;
+    const field5Value = document.getElementById('field5').value;
+
+    // Создание объекта с данными для POST-запроса
+    const postData = {
+        name: field1Value,
+        tg: field2Value,
+        inst: field3Value,
+        age: field4Value,
+        about: field5Value
+    };
+
+    // Отправка POST-запроса
+    fetch(window.location.href+'saveAboutForm', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData)
+    })
+    .then(response => response.json())
+    .then(responseData => {
+        // Обработка данных после успешного POST-запроса
+        console.log('POST response:', responseData);
+
+        // Ваш следующий код, который должен выполниться после успешного POST-запроса
+        // Например:
+        // someFunction();
+    })
+    .catch(error => {
+        console.error('Error during POST request:', error);
+    });
+}
+
 
 
 
