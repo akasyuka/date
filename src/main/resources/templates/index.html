@@ -5,7 +5,8 @@
     <script th:src="@{/js/script.js}"></script>
 </head>
 <body>
-        <img th:src="@{/images/cat.jpg}"/>
+        <img id="cat" th:src="@{/images/cat.jpg}"/>
+        <img id="catBack" style="display: none;" th:src="@{/images/catBack.png}"/>
         <div id="ask" class="one">Пойдешь на свидание?</div>
         <div id="ans" class="yesornot-container">
             <button class="yesornot" onclick="clickYes()">да</button>

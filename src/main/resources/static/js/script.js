@@ -4,6 +4,13 @@ function hideButton() {
         button.style.display = 'none';
     var div = document.getElementById('ask');
             div.style.display = 'none';
+    var cat = document.getElementById('cat');
+                cat.style.display = 'none';
+    var catBack = document.getElementById('catBack');
+                catBack.style.display = 'block';
+                catBack.style.textAlign  =  'center';
+                catBack.style.marginLeft = 'auto';
+                catBack.style.marginRight = 'auto';
 }
 function showAnsYes() {
     var messageDiv = document.getElementById('ansYes');
@@ -38,10 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', '/isAnswered', true);
     xhr.onreadystatechange = function () {
-            var response = JSON.parse(xhr.responseText);
-
-            if (response.isAnswered) {
-                hideButton()
+            if (xhr.readyState === 4) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.isAnswered) {
+                    hideButton();
+                }
             }
     };
     xhr.send();

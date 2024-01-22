@@ -1,10 +1,10 @@
 CI
-docker build -t date:1.0 .
-docker tag date:1.0 akasyuka/date:1.0
-docker push akasyuka/date:1.0
+docker build -t date:1.2 .
+docker tag date:1.2 akasyuka/date:1.2
+docker push akasyuka/date:1.2
 
 CD
-docker run -d -p 80:8080 akasyuka/date:1.0
+docker run -d -p 80:80 akasyuka/date:1.2
 
 java -jar date-0.0.1.jar
 
