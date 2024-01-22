@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+        <img th:src="@{/images/cat.jpg}"/>
+        <div id="ask" class="one">Пойдешь на свидание?</div>
+        <div id="ans" class="yesornot-container">
+            <button class="yesornot" onclick="clickYes()">да</button>
+            <button class="yesornot" onclick="clickNo()">нет</button>
+        </div>
+        <div id="ansYes" style="display: none;">Ваш ответ ДА</div>
+        <div id="ansNo" style="display: none;">Ваш ответ НЕТ</div>
+</body>
+</html>

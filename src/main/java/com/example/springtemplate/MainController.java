@@ -1,19 +1,36 @@
 package com.example.springtemplate;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 public class MainController {
 
-
     @Autowired
-    MainService mainService;
+    private CountComponent countComponent;
 
-    @GetMapping("/hello")
+
+    @GetMapping("/")
     public String hello() {
-        String str = mainService.returnString("a") + mainService.returnString("b");
-        return str;
+        return "index";
+    }
+
+
+    @PostMapping("/updateClickCount")
+    @ResponseBody
+    public HttpStatus updateClickCount(@RequestBody ClickCountRequestDTO request) {
+        if (YesOrNotEnum.YES == request.getYesOrNotEnum()) {
+            countComponent.incrementStaticVariable();
+            return HttpStatus.OK;
+        } else if (YesOrNotEnum.NO == request.getYesOrNotEnum()){
+            countComponent.decrementStaticVariable();
+            return HttpStatus.OK;
+        } else {
+
+            return HttpStatus.NOT_ACCEPTABLE;
+        }
     }
 }
+
