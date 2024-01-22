@@ -2,20 +2,34 @@ body {
     text-align: center;
     margin-top: 15vh;
 }
-.yesornot-container{
-    display: flex;
-    justify-content: center;
-}
-.yesornot{
-    margin: 0 80px;
-    font-size: 120px;
-}
-.one{
-    font-size: 60px;
-    margin-bottom: 10vh;
-}
 img {
     width: 75%;
     height: 75%;
 }
+.visible {
+    display: block;
+    margin: 0 80px;
+    font-size: 80px;
+}
+.invisible {
+    display: none;
+    margin: 0 80px;
+    font-size: 120px;
+}
 
+.variant-visible{
+    display: block;
+    margin: 0 80px;
+    font-size: 120px;
+}
+
+.variant-invisible{
+    display: none;
+    margin: 0 80px;
+    font-size: 120px;
+}
+
+.yesOrNot-container{
+    display: flex;
+    justify-content: center;
+}

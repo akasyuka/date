@@ -6,13 +6,13 @@
 </head>
 <body>
         <img id="cat" th:src="@{/images/cat.jpg}"/>
-        <img id="catBack" style="display: none;" th:src="@{/images/catBack.png}"/>
-        <div id="ask" class="one">Пойдешь на свидание?</div>
-        <div id="ans" class="yesornot-container">
-            <button class="yesornot" onclick="clickYes()">да</button>
-            <button class="yesornot" onclick="clickNo()">нет</button>
+        <img id="catBack" th:src="@{/images/catBack.png}"/>
+        <div id="ask" class="invisible">Пойдешь на свидание?</div>
+        <div class="yesOrNot-container">
+            <button id="yes" class="variant-invisible" onclick="clickYes()">да</button>
+            <button id="no" class="variant-invisible" onclick="clickNo()">нет</button>
         </div>
-        <div id="ansYes" style="display: none;">Ваш ответ ДА</div>
-        <div id="ansNo" style="display: none;">Ваш ответ НЕТ</div>
+<!--        <div id="ansYes" style="display: none;">Ваш ответ ДА</div>-->
+<!--        <div id="ansNo" style="display: none;">Ваш ответ НЕТ</div>-->
 </body>
 </html>

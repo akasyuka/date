@@ -17,4 +17,8 @@ public class CountComponent {
     public void decrementStaticVariable() {
         staticVariable--;
     }
+
+    public void setStaticVariable() {
+        staticVariable = 0;
+    }
 }
