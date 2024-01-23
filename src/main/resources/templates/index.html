@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<meta name="viewport" content="user-scalable=0"/>
 <head>
     <link rel="stylesheet" th:href="@{/css/styles.css}"/>
     <script th:src="@{/js/script.js}"></script>
+    <script th:src="@{https://code.jquery.com/jquery-3.6.4.min.js}"></script>
 </head>
 <body>
-        <img id="cat" th:src="@{/images/cat.jpg}"/>
-        <img id="catBack" th:src="@{/images/catBack.png}"/>
-        <div id="ask" class="invisible">Пойдешь на свидание?</div>
-        <div class="yesOrNot-container">
-            <button id="yes" class="variant-invisible" onclick="clickYes()">да</button>
-            <button id="no" class="variant-invisible" onclick="clickNo()">нет</button>
-        </div>
-        <form id="myForm">
-            <label for="field1">Имя:</label>
-            <input type="text" id="field1" name="field1"><br>
+    <img id="cat" src="/images/cat.jpg" alt="Кот" class="my-image">
+    <div id="hello" class="my-hello">Давай дружить?</div>
+    <div id="bye" class="my-bay">Приятно познакомиться!</div>
+    <form id="myForm" class="my-form">
+        <label for="field1">Имя:</label>
+        <input type="text" id="field1" name="field1" required>
 
-            <label for="field2">Инст:</label>
-            <input type="text" id="field2" name="field2"><br>
+        <label for="field2">Инст:</label>
+        <input type="text" id="field2" name="field2" required>
 
-            <label for="field3">Тг:</label>
-            <input type="text" id="field3" name="field3"><br>
+        <label for="field3">О себе:</label>
+        <input type="text" id="field3" name="field3" required>
 
-            <label for="field4">Возраст:</label>
-            <input type="text" id="field4" name="field4"><br>
-
-            <label for="field5">О себе:</label>
-            <input type="text" id="field5" name="field5"><br>
-
-            <button type="button" onclick="submitForm()">Отправить</button>
-        </form>
+        <button type="button" onclick="submitForm()">Отправить</button>
+    </form>
 </body>
 </html>
