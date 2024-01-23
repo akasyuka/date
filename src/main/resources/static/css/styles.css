@@ -5,6 +5,7 @@ body {
   font-size: 50px;
 }
 .my-image {
+    margin-top: 100px;
     width: 75vw;
     height: auto;
 }
