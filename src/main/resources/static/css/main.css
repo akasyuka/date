@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my-image {
+    margin-top: 3vh;
+    height: 50vh;
+    weight: auto;
+}
+.my-hello {
+    font-size: 3vh;
+    height: 3vh;
+    weight: auto;
+}
+.my-bay {
+    display: none;
+    height: 5vh;
+    weight: auto;
+}
+.my-form {
+    display: flex;
+    margin-top: 3vh;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20vh;
+    width: auto;
+    font-size: 2vh;
+}
+button{
+    height: 5vh;
+    width: auto;
+    line-height: center;
+    margin-top: 3vh;
+    font-size: 4vh;
+}
+
+input{
+    height: 3vh;
+    font-size: 3vh;
+    outline: none;
+}
+label{
+    height: 3vh;
+}
