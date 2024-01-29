@@ -1,5 +1,6 @@
-package com.example.springtemplate;
+package com.example.springtemplate.entity.dto;
 
+import com.example.springtemplate.enums.YesOrNot;
 import lombok.Data;
 
 @Data

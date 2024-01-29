@@ -1,7 +1,8 @@
-package com.example.springtemplate;
+package com.example.springtemplate.controller;
 
+import com.example.springtemplate.entity.AboutForm;
+import com.example.springtemplate.repository.AboutFormRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,11 +15,15 @@ public class ApiController {
     @Autowired
     AboutFormRepository aboutFormRepository;
 
+    @GetMapping("/health")
+    public String healthCheck() {
+        return  "Сервис работает!";
+    }
+
     @GetMapping("/info")
     public List<AboutForm> info() {
         return  aboutFormRepository.findAll();
     }
-
 
     @PostMapping("/saveAboutForm")
     @ResponseBody
